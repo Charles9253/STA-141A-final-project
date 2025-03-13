@@ -153,7 +153,7 @@ contrast_summary <- trial_conditions_sample %>%
 ggplot(contrast_summary, aes(x = factor(contrast_left), y = factor(contrast_right), 
                             fill = avg_success_rate, size = total_trials)) +
   geom_tile() +
-  scale_fill_gradient(low = "white", high = "blue")
+  scale_fill_gradient(low = "white", high = "blue"）
 ```
 
 The heatmap illustrates how success rates vary with different combinations of contrast values. Several patterns emerge from this visualization. First, trials with higher contrast differences between left and right screens generally have higher success rates, which aligns with the expectation that mice find it easier to discriminate between stimuli when the contrast difference is larger. Second, when both left and right contrasts are zero (no stimuli), the success rate is relatively high, suggesting that mice can effectively hold the wheel still as required. Lastly, we observe that trials with equal but non-zero contrasts (where a random direction is chosen as correct) have success rates close to 50%, consistent with the random nature of the correct choice in these cases.
